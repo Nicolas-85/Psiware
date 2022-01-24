@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Psiware - Ejercicio: Home Project</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="contImg">
+            <img class="img" src="img/Logo02.png" alt="">
+        </div>
+        <div>
+            <div class="contTit">    
+                <h1>Ejercicio: Home Project</h1>
+            </div>
+        </div>
+    </nav>
+    <form id="formulario">
+        <h2>Cálculo Indice de Masa Corporal</h2>
+        <div class="contDivsInputs">
+            <div>    
+                <label for="nombre">Nombre:</label> 
+                <input type="text" placeholder="Sólo nombre de pila" name="nombre" id="nombre">
+            </div>
+            <div>
+                <label for="estatura">Estatura:</label>  
+                <input type="number" placeholder="Expresada en mts: 1.00" name="Estatura" id="estatura"> 
+                <!-- Al darle type number, no te permite otro formato -->
+            </div>
+            <div>
+                <label for="edad">Edad:</label> 
+                <input type="number" placeholder="Sólo números" name="Edad" id="edad">
+            </div>
+            <div>
+                <label for="peso">Peso:</label> 
+                <input type="number" placeholder="Expresado en Kg." name="Peso" id="peso">
+            </div>
+        </div>
+        <div class="contBtn">
+            <button type="submit" id="button">Calcular IMC</button>
+        </div>
+    </form>
+
+    <section id="seccionRes" class="contColRes invisible">
+        <div class="contResultado">
+            <h2>Resultado I.M.C.:</h2>
+            <div id="contResultado" class="contLabelRes">
+                <!-- <label for="resultado">Acá va el resultado</label> -->
+            </div>
+            <div class="contBtn">
+                <button id="reiniciar">Reiniciar Cálculo</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="JS/app.js"></script>
+</body>
+</html>

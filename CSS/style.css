@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Barra con logo y título del proyecto */
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px 5px 5px 5px;
+    font-size: 20px;
+}
+
+.img{
+    width: 100px;
+    height: 100px;
+}
+
+.contTit{
+    padding: 5px 5px 5px 5px;
+}
+
+/* estilo para el formulario principal y aplica también para el div contenedor de los resultados, hijo del <section> */
+form, .contResultado{
+    margin: 20px 5px 15px 5px;
+    border: solid 1px transparent;
+    background-color: #b8b8b8;
+    padding: 4px;
+    border-radius: 5%;
+}
+
+/* estilo para el h2 del formulario y del resultado */
+form h2, .contResultado h2{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* contenedor de los label e imputs y del contenedor del label resultado. */
+form .contDivsInputs div, .contLabelRes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 15px 3px 15px;
+    margin-bottom: 5px;
+}
+
+label{
+    font-weight: 800;
+    font-size: 16px;
+}
+
+input{
+    border-radius: 5px;
+    border-style: hidden;
+    padding: 1px;
+}
+
+/* los contenedores de los dos botones. */
+.contBtn{
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+button{
+    padding: 1px 7px 1px 7px;
+    font-size: 16px;
+    font-weight: 800;
+    background-color: #00eed2;
+    cursor: pointer;
+    border: solid 3px #00eed2;
+    border-radius: 5px;
+    border-style: outset;
+}
+
+/* clases para mostrar y ocultar el cuadro con el resultado */
+.invisible{
+    display: none;
+}
+.visible{
+    display: block;
+    border-radius: 5px;
+}
+
+/* Primer medida de cambio. */
+@media(min-width:600px){
+    .nav{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+    }
+    form{
+        border-radius: 5px;
+    }
+    
+    form .contDivsInputs{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    form .contDivsInputs div{
+        justify-content: space-around;
+    }
+
+    .contTit{
+        text-align: center;
+    }
+
+    .invisible{
+        display: none;
+    }
+    .visible{
+        display: block;
+    }
+
+    .contColRes{
+    text-align: -webkit-center;
+    }
+
+    .contResultado{
+        width: 500px;
+        border-radius: 10px;
+    }
+}
+
+/* Segundo cambio */
+@media(min-width:700px){
+    form .contDivsInputs{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+    }
+
+    .invisible{
+        display: none;
+    }
+    .visible{
+        display: block;
+        border-radius: 10px;
+    }
+}
+
+/* Tercer cambio */
+@media(min-width:1000px){
+    form .contDivsInputs{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+    }
+
+    .invisible{
+        display: none;
+    }
+    .visible{
+        display: block;
+        border-radius: 10px;
+    }
+}
